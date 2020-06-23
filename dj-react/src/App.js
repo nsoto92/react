@@ -4,13 +4,18 @@ import Square from "./Square"
 import "./style.css"
 
 class App extends React.Component {
+  // Sets State
   constructor() {
     super()
     this.state = {
       colors: ["white", "white", "white", "white"]
     }
+
+    // Bind all functions to class component's state:
     this.firstButton = this.firstButton.bind(this)
     this.secondButton = this.secondButton.bind(this)
+    this.bottomLeft = this.bottomLeft.bind(this)
+    this.bottomRight = this.bottomRight.bind(this)
   }
 
 
@@ -46,8 +51,29 @@ class App extends React.Component {
     })
   }
 
+  // #3
+  // Add two more buttons, for a total of four. These next two will change the colors of the bottom squares blue, but individually. One will be linked to the bottom left, and the other to the bottom right.
+
+  bottomLeft() {
+    this.setState(prevState => {
+      return {
+        colors: [prevState.colors[0], prevState.colors[1], "blue", prevState.colors[3]]
+      }
+    })
+  }
+
+  bottomRight() {
+    this.setState(prevState => {
+      return {
+        colors: [prevState.colors[0], prevState.colors[1], prevState.colors[2], "blue"]
+      }
+    })
+  }
 
 
+  /////////////////
+  // Render Page
+  /////////////////
   render() {
     const squareMap = this.state.colors.map(item => <Square color={item} />)
 
@@ -58,6 +84,8 @@ class App extends React.Component {
         </div>
         <button onClick={this.firstButton}>Button 1</button>
         <button onClick={this.secondButton}>Button 2</button>
+        <button onClick={this.bottomLeft}>Button 3</button>
+        <button onClick={this.bottomRight}>Button 4</button>
       </div>
     );
   }
