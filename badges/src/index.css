@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+input {
+  width: 425px;
+  margin-right: 35px;
+  margin-top: 25px;
+}
+
+textarea {
+  width: 900px;
+  height: 150px;
+  margin-top: 25px;
+}
+
+button {
+  width: 200px;
+  margin-left: 350px;
+  margin-top: 25px;
+}
+
+.badgeForm {
+ width: 950px;
+ margin: auto;
+ margin-top: 25px;
+}
