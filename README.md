@@ -1,2 +1,2 @@
 ## React
-#### Repository for practicing React
+#### Repository for React projects
