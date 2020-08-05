@@ -1,6 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
+html {
+  box-sizing: border-box;
+  font-family: "Guardian-egyptt";
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 1400px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-color: grey;
+}
+
 header {
+  width: 1500px;
   padding-top: 15px;
   background-color: black;
   color: red;
@@ -9,3 +28,30 @@ header {
   text-align: center;
   height: 50px;
 }
+
+.container {
+  padding-top: 100px;;
+  margin: auto;
+  width: 600px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 0px;
+}
+
+.card {
+  width:175px;
+  text-align: center;
+}
+
+img {
+  width: 175px;
+  height: 175px;
+}
+
+p {
+  background-color: blue;
+  opacity: 75%;
+  position: relative;
+  top: -40px;
+}
+

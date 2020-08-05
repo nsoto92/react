@@ -4,9 +4,11 @@ import './App.css';
 
 function App() {
   return (
-    <div className="container">
+    <div>
       <header>Corleone Hit List</header>
-      <HitList />
+      <div className="container">
+        <HitList />
+      </div>
 
     </div>
   )
